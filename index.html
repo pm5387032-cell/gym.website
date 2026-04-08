@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GYM Web Page</title>
+  <link rel="stylesheet" href="gym.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <button id="scrollTopBtn">↑</button>
+  <header>
+    <nav>
+
+      <svg width="200" height="34" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg" style="margin-top: 8px;">
+
+        <!-- Background -->
+        <rect width="308" height="90" rx="15" fill="#111" />
+
+        <!-- Dumbbell -->
+        <rect x="90" y="56" width="140" height="10" fill="#ff3c00" />
+
+        <rect x="70" y="45" width="20" height="30" fill="#ff3c00" />
+        <rect x="230" y="45" width="20" height="30" fill="#ff3c00" />
+
+        <rect x="60" y="40" width="10" height="40" fill="#999" />
+        <rect x="250" y="40" width="10" height="40" fill="#999" />
+
+        <!-- Text -->
+        <text x="160" y="35" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle"
+          font-weight="bold">
+          TITAN STRENGTH
+        </text>
+
+      </svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org" class="open-btn">
+        <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+      <div class="content">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#program">Programs</a></li>
+          <li><a href="#plans">Membarship</a></li>
+          <li><a href="#review">Reviews</a></li>
+          <li><a href="#bmi">Bmi</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="close-btn">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org"
+              style="color: rgb(7, 7, 7);">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </li>
+      </div>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+      <h1 class="hero-title">
+        <span>Transform Your</span>
+        <span>Body</span>
+        <span>Transform Your</span>
+        <span>Life</span>
+      </h1>
+      <p>Train with expert coaches and world class equipment.</p>
+    </div>
+
+    <div class="hero-buttons">
+      <button>Join Now</button>
+      <a href="#plans"><button>View Plans</button></a>
+    </div>
+  </section>
+  <section class="secondsec">
+    <h1>Why <span>Choose</span> Our <span>Gym</span> </h1>
+    <div class="features">
+
+      <div class="feature">
+        <i class="fa-solid fa-user"></i>
+        <h3>Professional Trainers</h3>
+      </div>
+
+      <div class="feature">
+        <i class="fa-solid fa-dumbbell"></i>
+        <h3>Modern Equipment</h3>
+      </div>
+
+      <div class="feature">
+        <i class="fa-solid fa-bullseye"></i>
+        <h3>Personal Training</h3>
+      </div>
+
+      <div class="feature">
+        <i class="fa-solid fa-calendar"></i>
+        <h3>Flexible Plans</h3>
+      </div>
+
+    </div>
+  </section>
+  <section class="programs" id="program">
+
+    <h2>Our <span>Programs</span></h2>
+
+    <div class="program-list">
+
+      <div class="program">
+        <div class="program-img">
+          <img
+            src="https://media.gettyimages.com/id/700915444/photo/gritty-women.jpg?s=612x612&w=0&k=20&c=rBuAZGPHVxgL5l8ff07aktzNBVkpDYkQdBf672qsVtA=">
+        </div>
+        <h3><span>Strength</span> Training</h3>
+      </div>
+
+      <div class="program">
+        <div class="program-img">
+          <img
+            src="https://media.gettyimages.com/id/1145944459/photo/group-exercise-class.jpg?s=612x612&w=0&k=20&c=8nvCimKAY0BpVgJe_a1UAdWutBXDivzzBoXSzXWf-oM=">
+        </div>
+        <h3><span>Cardio</span> Training</h3>
+      </div>
+      <div class="program">
+        <div class="program-img">
+          <img
+            src="https://media.gettyimages.com/id/1155183957/photo/an-overweight-man-at-a-gym-using-exercising-machine-while-looking-at-the-mirror.jpg?s=612x612&w=0&k=20&c=AC78XAZ76m-AuWzgLlw8Qv6ZQoXgvM0dRTWRjReDZiY=">
+        </div>
+        <h3><span>Weight </span>Loss</h3>
+      </div>
+
+      <div class="program">
+        <div class="program-img">
+          <img
+            src="https://media.gettyimages.com/id/181894126/photo/bodybuilder-performing-power-lift-curl.jpg?s=612x612&w=0&k=20&c=EgSSULePUdwg5QlUDr5Ms75e-iu4QsyaJpJAul5JLs8=">
+        </div>
+        <h3><span>Body</span>building</h3>
+      </div>
+
+    </div>
+
+  </section>
+  <section class="pricing" id="plans">
+
+    <h2>Membership <span> Plans</span></h2>
+
+    <div class="pricing-container">
+
+      <div class="plan">
+        <h3>Basic</h3>
+        <p class="price">₹999 / month</p>
+        <button>Join Now</button>
+      </div>
+
+      <div class="plan plan2">
+        <h3>Standard</h3>
+        <p class="price">₹1999 / month</p>
+        <button>Join Now</button>
+      </div>
+
+      <div class="plan">
+        <h3>Premium</h3>
+        <p class="price">₹2999 / month</p>
+        <button>Join Now</button>
+      </div>
+
+    </div>
+
+  </section>
+  <section class="bmi" id="bmi">
+    <h2>BMI <span>Calculator</span></h2>
+
+    <div class="bmi-box">
+
+      <input type="text" class="ans">
+      <p class="ans-defination"></p>
+      <div class="inputs">
+        <input type="text" placeholder="height" id="height">
+        <input type="text" placeholder="weight" id="weight">
+      </div>
+      <button id="bmicalc">calculate</button>
+    </div>
+
+  </section>
+  <section class="trainers" id="trainers">
+    <h2>Meet <span> Our</span> Trainers</h2>
+    <div class="trainerimg">
+      <div class="trainer-img">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1663072203619-8e1748d7a241?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3RyZW5ndGglMjB0cmFpbmVyJTIwbWVuJTIwaW1hZ2V8ZW58MHx8MHx8fDA%3D"
+          alt="trainer image">
+        <div class="overlay">
+          <p>Professional <span>strenth</span> trainer with 10+ years experience</p>
+          <span class="more">More >></span>
+        </div>
+      </div>
+      <div class="trainer-img"><img
+          src="https://images.unsplash.com/photo-1738523686878-e63f7d95dabf?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyZGlvJTIwdHJhaW5lciUyMG1lbiUyMGltYWdlJTIwZ3ltfGVufDB8fDB8fHww"
+          alt="trainer image">
+        <div class="overlay">
+          <p>Professional <span>cardio</span> trainer with 10+ years experience</p>
+          <span class="more">More >></span>
+        </div>
+      </div>
+      <div class="trainer-img"><img
+          src="data:image/jpeg;base64,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"
+          alt="trainer image">
+        <div class="overlay">
+          <p>Professional <span>fitness</span> trainer with 10+ years experience</p>
+          <span class="more">More >></span>
+        </div>
+      </div>
+      <div class="trainer-img"><img
+          src="https://media.istockphoto.com/id/1299359057/photo/portrait-of-a-physically-fit-muscular-young-man.jpg?s=612x612&w=is&k=20&c=dJ2rI69X3BodbbjEIEBCLtZueDkD-1tbkGCTmdXlHk4="
+          alt="">
+        <div class="overlay">
+          <p>Professional <span>body builder</span> trainer with 10+ years experience</p>
+          <span class="more">More >></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="review" id="review">
+    <h2>reviews</h2>
+    <div class="reviews-boxes">
+      <div class="review-box">
+        <h3>Rating</h3>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>i lose my weight in just 3 month</p>
+        <p>Name:- rajesh</p>
+      </div>
+      <div class="review-box">
+        <h3>Rating</h3>
+        <p>⭐⭐⭐⭐</p>
+        <p>thank you Titan strength</p>
+        <p>Name:- kamlesh</p>
+      </div>
+      <div class="review-box">
+        <h3>Rating</h3>
+        <p>⭐⭐⭐⭐</p>
+        <p>
+          the gym is really good that have load of exprince trainers i love this gym
+        </p>
+        <p>Name:- keshav</p>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+
+      <button id="btn" type="submit">Send Message</button>
+    </form>
+    <p id="status"></p>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box">
+        <h3>GYM</h3>
+        <p>Transform your body and achieve your fitness goals.</p>
+      </div>
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">Programs</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-box">
+        <h2>Conect us on</h2>
+        <div class="footer-logo">
+          <a href=""> <img src="instagram-1-svgrepo-com (1).svg" alt="" height="25" width="50"></a>
+          <a href=""><img src="facebook-svgrepo-com.svg" alt="" height="50" width="25"></a>
+          <a href=""><img src="whatsapp-icon-logo-svgrepo-com.svg" alt="" height="25" width="50"></a>
+          <a href=""><img src="gmail-svgrepo-com.svg" alt="" height="50" width="25"></a>
+        </div>
+      </div>
+
+      <div class="footer-box ">
+        <h3>Contact</h3>
+        <p>Delhi, India</p>
+        <p>+91 9876543210</p>
+        <p>gym@email.com</p>
+      </div>
+
+    </div>
+
+    <p class="copyright">
+      © 2026 Gym Website | All Rights Reserved
+    </p>
+
+  </footer>
+  <script src="gym.js"></script>
+</body>
+
+</html>
