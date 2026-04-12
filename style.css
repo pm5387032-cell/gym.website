@@ -274,7 +274,32 @@ body {
 .inputs input {
   width: 80%;
 }
+.ans-defination{
+  background-color: rgb(75, 63, 63);
+  border-radius:  10px; 
+  padding: 5px 15px;
 
+}
+.bmi-function{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+.bmi-function img{
+  padding: 3px;
+  border-radius: 5px;
+  background-color: white;
+  height: 20px;
+}
+.ans{
+  width: 50%;
+  text-align: center;
+}
+
+
+
+/* trainers section */
 .trainers {
   display: flex;
   justify-content: center;
@@ -471,6 +496,11 @@ button:disabled {
   margin-top: 20px;
   font-size: 14px;
 }
+
+
+
+
+
 /* MOBILE */
 @media (max-width: 768px) {
   .hero {
@@ -559,6 +589,7 @@ button:disabled {
     gap: 20px;
     align-items: center;
     text-align: center;
+    width: 80%;
   }
 
   .close-btn {
@@ -589,6 +620,12 @@ button:disabled {
 .overlay p {
   margin-bottom: 10px;
 }
+.ans{
+  width: 80%;
+}
+
+
+
 /* DESKTOP */
 @media (min-width: 769px) {
   .content {

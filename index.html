@@ -173,13 +173,16 @@
 
     <div class="bmi-box">
 
-      <input type="text" class="ans">
+      <input type="text" class="ans" readonly>
       <p class="ans-defination"></p>
       <div class="inputs">
-        <input type="text" placeholder="height" id="height">
-        <input type="text" placeholder="weight" id="weight">
+        <input type="number" id="height" name="quantity" min="1"  step="1" placeholder="height  M">
+        <input type="number" id="weight" name="quantity" min="1"  step="1" placeholder="weight kg">
       </div>
+      <div class="bmi-function">
+      <img src="reset-reload-refresh-sync-arrow-update-svgrepo-com.svg" alt="" id="reset" >
       <button id="bmicalc">calculate</button>
+      </div>
     </div>
 
   </section>

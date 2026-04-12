@@ -64,12 +64,48 @@ btn1.onclick = function () {
 
 
 // bmi calculater
-let height = document.querySelector("#height")
-let weight = document.querySelector("#weight")
-let ans = document.querySelector(".ans")
-let bmicalc = document.querySelector("#bmicalc")
+let height = document.querySelector("#height");
+let weight = document.querySelector("#weight");
+let ans = document.querySelector(".ans");
+let bmicalc = document.querySelector("#bmicalc");
+let ansdefination = document.querySelector(".ans-defination")
+let reset = document.querySelector("#reset")
+
+function bmi(h, w) {
+  return w / (h * h);
+}
 
 bmicalc.addEventListener("click", () => {
-let bmi = weight.value/height.value*2 
-bmi.value = ans.value
-})
+  let h = parseFloat(height.value);// convert cm to meter
+  let w = parseFloat(weight.value);
+
+  if (h > 0 && w > 0) {
+    let result = bmi(h, w).toFixed(2);
+    ans.value = result ;
+     if(result <= 18.5){
+    ansdefination.innerText = "Underweight ⚠️";
+    ansdefination.style.color = "yellow"
+  }
+  else if(result <= 24.9){
+        ansdefination.innerText ="Normal ✅";
+        ansdefination.style.color ="green";
+
+  }
+  else if(result <= 29.9){
+        ansdefination.innerText= "Overweight ⚠️";
+        ansdefination.style.color= "oramge";
+  }
+  else{
+        ansdefination.innerText = "tumhe sach me bajan kam karne ki jarurat";
+        ansdefination.style.color = "red";
+  }
+  } else {
+    ans.value = "Enter valid values";
+  }
+  reset.addEventListener("click" , (e)=>{
+    height.value = "";
+    weight.value = "";
+    ans.value = "";
+    ansdefination.innerText = "";
+  })
+});
