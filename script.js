@@ -70,6 +70,7 @@ let ans = document.querySelector(".ans");
 let bmicalc = document.querySelector("#bmicalc");
 let ansdefination = document.querySelector(".ans-defination")
 let reset = document.querySelector("#reset")
+let ansadvice = document.querySelector(".ans-advice")
 
 function bmi(h, w) {
   return w / (h * h);
@@ -84,15 +85,19 @@ bmicalc.addEventListener("click", () => {
     ans.value = result ;
      if(result <= 18.5){
     ansdefination.innerText = "Underweight ⚠️";
+    ansadvice.innerText = "tumhe bhajan bhadane ki jarurat hai ... aap cario join kar sakte hai";
     ansdefination.style.color = "yellow"
+    ansadvice.style.color="red"
   }
   else if(result <= 24.9){
         ansdefination.innerText ="Normal ✅";
+        ansadvice.innerText = "aap fit ho aap roj excise kar sakte ho fit rahne ke liye "
         ansdefination.style.color ="green";
 
   }
   else if(result <= 29.9){
         ansdefination.innerText= "Overweight ⚠️";
+        ansadvice.innerText = "aap overweight ho aapkoo bhajan kam karne ki jarurat hai"
         ansdefination.style.color= "oramge";
   }
   else{
@@ -100,12 +105,13 @@ bmicalc.addEventListener("click", () => {
         ansdefination.style.color = "red";
   }
   } else {
-    ans.value = "Enter valid values";
+    ans.value = "";
   }
   reset.addEventListener("click" , (e)=>{
     height.value = "";
     weight.value = "";
     ans.value = "";
     ansdefination.innerText = "";
+    ansadvice.innerText = "";
   })
 });
