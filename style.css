@@ -35,11 +35,11 @@ ul {
   display: flex;
   gap: 20px;
 }
-ul li {                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+ul li {
   list-style-type: none;
 }
-ul li a{
-  color:white;
+ul li a {
+  color: white;
 }
 #scrollTopBtn {
   position: fixed;
@@ -69,8 +69,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-.hero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -274,30 +272,27 @@ body {
 .inputs input {
   width: 80%;
 }
-.ans-defination{
+.ans-defination {
   background-color: rgb(75, 63, 63);
-  border-radius:  10px; 
+  border-radius: 10px;
   padding: 5px 15px;
-
 }
-.bmi-function{
+.bmi-function {
   display: flex;
   justify-content: center;
   gap: 1rem;
   align-items: center;
 }
-.bmi-function img{
+.bmi-function img {
   padding: 3px;
   border-radius: 5px;
   background-color: white;
   height: 20px;
 }
-.ans{
+.ans {
   width: 50%;
   text-align: center;
 }
-
-
 
 /* trainers section */
 .trainers {
@@ -497,10 +492,6 @@ button:disabled {
   font-size: 14px;
 }
 
-
-
-
-
 /* MOBILE */
 @media (max-width: 768px) {
   .hero {
@@ -575,21 +566,27 @@ button:disabled {
   .content {
     position: absolute;
     top: 10px;
-    height: cover;
     right: 0;
     width: 100%;
-    flex-direction: column;
     color: rgb(238, 238, 238);
-    background-color: rgb(177, 170, 170);
-    display: none;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.4
+    ); /* Halka kaala aur transparent background */
+    backdrop-filter: blur(10px);
     z-index: 999;
+    padding: 20px;
+    display: none;
+    transition: transform 100ms ease-in-out;
   }
   ul {
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
     text-align: center;
-    width: 80%;
+    width: 100%;
   }
 
   .close-btn {
@@ -599,13 +596,12 @@ button:disabled {
     padding: 4px;
     background-color: #fff;
   }
-  ul li {
-    height: auto;
-    width: 80px;
-    padding: 4px 400px;
-  }
+
   ul li:hover {
     background-color: rgb(223, 89, 89);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
   }
   .close-btn:hover {
     background-color: red;
@@ -620,11 +616,9 @@ button:disabled {
 .overlay p {
   margin-bottom: 10px;
 }
-.ans{
+.ans {
   width: 80%;
 }
-
-
 
 /* DESKTOP */
 @media (min-width: 769px) {
