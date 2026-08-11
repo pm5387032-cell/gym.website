@@ -6,10 +6,12 @@ let body = document.querySelector("body")
 closebtn.addEventListener("click", (e) => {
   e.preventDefault();
   content.style.display = "none";
+  document.body.style.overflow = "auto"
 });
 openbtn.addEventListener("click", (e) => {
   e.preventDefault();
   content.style.display = "flex";
+  document.body.style.overflow = "hidden";
 });
 
 (function(){
