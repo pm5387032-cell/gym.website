@@ -3,11 +3,22 @@ let openbtn = document.querySelector(".open-btn");
 let content = document.querySelector(".content");
 let body = document.querySelector("body")
 
-closebtn.addEventListener("click", (e) => {
-  e.preventDefault();
+
+function closeContent() {
   content.style.display = "none";
-  document.body.style.overflow = "auto"
+  document.body.style.overflow = "auto";
+}
+
+closebtn.addEventListener("click", closeContent);
+content.addEventListener("click", (e)=>{
+  if(e.target == content){
+    closeContent();
+  }
 });
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeContent();
+});
+
 openbtn.addEventListener("click", (e) => {
   e.preventDefault();
   content.style.display = "flex";
@@ -117,3 +128,89 @@ bmicalc.addEventListener("click", () => {
     ansadvice.innerText = "";
   })
 });
+
+
+
+// dyanamic pop card
+
+const popupImage = document.querySelector(".popup-image")
+const popupName = document.querySelector(".popup-name")
+const popupExprince = document.querySelector(".popup-exprince")
+const moreBTNS = document.querySelectorAll(".more")
+const trainerPopupCard = document.querySelector(".trainers-popup-card")
+// const body = document.querySelector("body")
+const crossBTN = document.querySelector(".popup-cross-btn")
+const trainerBioSummary = document.querySelector(".trainer-bio-summary")
+
+
+
+const data = [
+  {
+    id:1,
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDCzmycqHc9qjYoGo8Z7usCcNU4FNDKO5Hyin79R0Wcg&s=10",
+    name:"piyush",
+    exprince:"6 year ",
+    bio:"piyush is a certified personal trainer with over 6 years of experience in helping clients achieve their fitness goals. He specializes"
+    
+  },
+  {
+    id:2,
+    img:"Screenshot 2026-09-02 132333.png",
+    name:"second trainer",
+    exprince:"3 year ",
+    bio:"This is the bio for the second trainer."
+
+  },
+  {
+    id:3,
+    img:"Screenshot 2026-09-02 132333.png",
+    name:"third trainer",
+    exprince:"6 year ",
+    bio:"This is the bio for the third trainer."
+    
+  },
+  {
+    id:4,
+    img:"Screenshot 2026-09-02 132333.png",
+    name:"kesav",
+    exprince:"6 year ",
+    bio:"This is the bio for the fourth trainer.",
+    socialMedia:{
+
+    }
+  }
+
+]
+
+function openpopup(){
+  trainerPopupCard.style.display = "flex"
+
+}
+moreBTNS.forEach((morebtns, index) => {
+  morebtns.addEventListener("click", (e) => {
+    e.stopPropagation()
+    let newarray = data.find((items) => items.id == index + 1);
+    if(newarray){
+      popupExprince.innerText = newarray.exprince
+      popupName.innerText = newarray.name
+      popupImage.src = newarray.img
+      trainerBioSummary.innerText = newarray.bio
+      openpopup()
+
+    }
+  })
+});
+
+function closepopup(){
+trainerPopupCard.style.display = "none"
+body.style.overflow = "auto"
+}
+document.addEventListener("click", (e) => {
+  if (trainerPopupCard && !trainerPopupCard.contains(e.target) ) {
+    closepopup();
+  }
+});
+
+
+
+crossBTN.addEventListener("click",closepopup)

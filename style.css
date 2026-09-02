@@ -300,10 +300,12 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .trainers h2 {
   color: rgb(255, 0, 0);
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  text-wrap: nowrap;
   font-family: sans-serif;
 }
 .trainers h2 span {
@@ -363,6 +365,57 @@ body {
 .more:hover {
   background-size: 100% 2px;
   text-underline-offset: 1px;
+}
+
+/* dyanmic card desing */
+.trainers-popup-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  border: 2px solid rgb(102, 95, 95);
+  position: absolute;
+  z-index: 99;
+  height: 50%;
+  width: 70%;
+  padding: 20px;
+  background-color: white;
+  background: rgba(255, 255, 255, 0.2); /* हल्का पारदर्शी बैकग्राउंड जरूरी है */
+  backdrop-filter: blur(10px); /* पीछे की चीजों को धुंधला करने के लिए */
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+    border-radius: 50%;
+
+}
+
+.popup-cross-btn{
+  z-index: 99;
+  position: absolute;
+  left: 45%;
+  top: 5px;
+  background-color: rgb(71, 75, 71);
+  border-radius: 20%;
+  padding: 10px;
+}
+
+ .trainer-popup-image img{
+  border-radius: 50%;
+}
+
+
+.trainer-social-heding{
+font-size: large;
+font-family: sans-serif;
+}
+.trainer-social{
+display: flex;
+gap: 10px;
+}
+
+.trainer-social-icons:hover{
+scale: 1.2;
+transition: 2ms ease-in;
 }
 .review {
   display: flex;
@@ -579,7 +632,7 @@ button:disabled {
     z-index: 999;
     padding: 20px;
     display: none;
-    transition: transform 100ms ease-in-out;
+    transition: transform 10s ease-in-out;
   }
   ul {
     flex-direction: column;
@@ -667,5 +720,11 @@ button:disabled {
   }
   .review-box {
     min-width: 300px;
+  }
+
+  .trainers-popup-card{
+    top: 10px;
+    height: 450px;
+    width: clamp(12rem,50vw,27rem);
   }
 }
