@@ -289,6 +289,7 @@ body {
   background-color: white;
   height: 20px;
 }
+
 .ans {
   width: 50%;
   text-align: center;
@@ -384,19 +385,8 @@ body {
   background: rgba(255, 255, 255, 0.2); /* हल्का पारदर्शी बैकग्राउंड जरूरी है */
   backdrop-filter: blur(10px); /* पीछे की चीजों को धुंधला करने के लिए */
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
-    border-radius: 50%;
+  border-radius: 20px;
 
-}
-
-.popup-cross-btn{
-  z-index: 99;
-  position: absolute;
-  left: 45%;
-  top: 5px;
-  background-color: rgb(71, 75, 71);
-  border-radius: 20%;
-  padding: 10px;
 }
 
  .trainer-popup-image img{
@@ -726,5 +716,6 @@ button:disabled {
     top: 10px;
     height: 450px;
     width: clamp(12rem,50vw,27rem);
+     border-radius: 50%;
   }
 }
